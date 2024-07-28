@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form</title>
+</head>
+<body>
+     <div id="aside">
+        <span class="logo"><img id="fimg" src="./flower.png" alt="flower">renaissance of nature</span>
+        <small>Image by <a href="https://unsplash.com/@zapiatkina">Kseniia Zapiatkina
+        </a>on unsplash</small>
+     </div>
+     <div id="formSection">
+    <h4>This is a really really fake form. It might not be obvious but all of this is Fake. Necessitatibus omnis a ex?</h4>
+    <h4>You can still try to fill it though.</h4>
+        <form action="" method="post">
+    <section class="personalInfo">
+        <h1>Let's do this!</h1>
+    <p>
+
+        <span>
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="first_name" placeholder="John" minlength="2" maxlength="15" required>
+
+        </span>
+    <span>
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="last_name" placeholder="Doe" minlength="2" maxlength="15" required>
+    </span>
+    </p>
+
+    <p>
+        
+        <span>
+        <label for="mail">Email</label>
+        <input type="email" id="mail" name="user_email" placeholder="johndoe@example.com" required>
+    </span>
+    <span>
+        <label for="contact_number">Contact</label>
+        <input type="tel" name="user_contact_number" id="contact_number" placeholder="+91 ...">
+    </span>
+    </p>
+
+    <p>
+    <span>
+        <label for="pwd">Password </label>
+        <input type="password" id="pwd" title="*Password do not match" required>
+        <strong><span aria-label = "required">*Password do not match</span></strong>
+</span>
+<span>
+        <label for="cpwd">Confirm Password</label>
+        <input type="password" id="cpwd" required>
+    </span>
+    </p>
+
+
+</section>
+
+<section class="submitSection">
+    <p>
+    <strong><button type="submit">Create Account</button></strong>
+</p>
+<p class="loginAl">
+    <label for="login">Already have an Account?</label>
+    <a href="#" id="login">log in</a>
+</p>
+</section>
+   </form> 
+   </div>
+</body>
+</html>

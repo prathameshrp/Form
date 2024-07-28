@@ -1,0 +1,270 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'caviar_dreams';
+    src: url('caviar_dreams_bold-webfont.woff2') format('woff2'),
+         url('caviar_dreams_bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'caviar_dreams';
+    src: url('caviardreams-webfont.woff2') format('woff2'),
+         url('caviardreams-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'caviar_dreams';
+    src: url('caviardreams_bolditalic-webfont.woff2') format('woff2'),
+         url('caviardreams_bolditalic-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'caviar_dreams';
+    src: url('caviardreams_italic-webfont.woff2') format('woff2'),
+         url('caviardreams_italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'bitstream_vera_sans';
+    src: url('vera-webfont.woff2') format('woff2'),
+         url('vera-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'bitstream_vera_sans';
+    src: url('vera-bold-webfont.woff2') format('woff2'),
+         url('vera-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'bitstream_vera_sans';
+    src: url('vera-italic-webfont.woff2') format('woff2'),
+         url('vera-italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+
+}
+:root
+{
+    --flower-bg: #d9e4ff;
+}
+
+body
+{
+    height: 100vh;
+    width: 100vw;
+}
+#aside
+{
+    width: clamp(240px, 40%, 50%);
+    height: 100vh;
+    float: left;
+    position: relative;
+    background: rgb(0, 0, 0)  url("./bgImage.jpg") no-repeat center center;
+    background-size: cover;
+    z-index: -2;
+
+}
+#aside::after
+{
+    /* display: inline-block; */
+    content: " ";
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* background-color: antiquewhite; */
+    /* text-wrap: nowrap; */
+    background: linear-gradient(to top, rgba(255,0,0,0), rgba(0, 0, 0, 0.425));
+    /* background: black; */
+    /* opacity: 0.7; */
+}
+.logo
+{
+    width: 100%;
+    position: absolute;
+    top: 30%;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.253);
+    color: white;
+    font-family: 'bitstream_vera_sans', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: calc(0.40rem + 1.65vw);
+    font-weight: bold;
+    backdrop-filter: blur(3px);
+    text-transform:uppercase;
+}
+
+#fimg
+{
+    display: inline-block;
+    width: calc(70px + 19%);
+    height: auto;
+    filter: invert(100%);
+}
+small
+{
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    margin: auto;
+}
+
+#formSection
+{
+    display: inline-block;
+    width: calc(100vw - clamp(240px, 40%, 50%));
+    position: relative;
+}
+#formSection h4
+{
+    left: 0;
+    right: 0;
+    margin: 20px 0 0 5%;
+    font-family: 'bitstream_vera_sans', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    /* position: absolute; */
+    width: 75%;
+}
+#formSection h4:first-child
+{
+    margin-top: 40px;
+}
+form{
+    font-size: calc(9px + 0.7vmax);
+    /* background-color: aqua; */
+    margin: 4vh 0 0 0;
+    box-sizing: border-box;
+    font-family: 'caviar_dreams', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+small
+{
+    text-transform: capitalize;
+    color: #d9e4ff;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.63);
+}
+small a
+{
+    color: rgb(170, 255, 227);
+}
+
+input{
+    width: 100%;
+    min-width: 60px;
+    border: 1px solid #E5E7EB;
+    height: 26px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 0.5em;
+    outline: none;
+}
+
+input[type="password"]:invalid
+{
+    border-color: salmon;
+}
+
+input:focus
+{
+    border:1px solid blue;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.466);
+    transition: border-color 0.3s, box-shadow 0.3s; 
+}
+
+p, h1
+{
+    
+    width: 90%;
+    /* background-color: bisque; */
+    display: flex;
+    /* flex-direction: row; */
+    gap: 5%;
+    align-self: center;
+
+}
+
+.personalInfo, .submitSection
+{
+    display: flex;
+    flex-direction: column;
+    gap: calc(12px + 2vmin);
+}
+.personalInfo
+{
+    width: 100%;
+    padding: 13px 0;
+    box-shadow: 2px 4px 7px rgba(0, 0, 0, 0.233);
+}
+
+p span
+{
+    display: flex;
+    flex-direction: column;
+
+}
+strong span
+{
+    font-family: 'caviar_dreams', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.7rem;
+    margin: 4px 0 4px 0;
+    color: salmon;
+}
+
+button[type="submit"]
+{
+    background-color: #87050a;
+    border: none;
+    font-family: 'caviar_dreams', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 7px;
+    font-size: 0.9rem + 2vmin;
+    color: #fff;
+}
+button:hover
+{
+    background-color: #596D48;
+    transition: background-color 0.2s ease-in-out;
+}
+.submitSection
+{
+
+    margin: 5vh 0 0 0 ;
+}
+.loginAl
+{
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin: 0;
+    gap: 3px;
+}
